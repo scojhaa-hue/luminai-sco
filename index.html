@@ -3,36 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>LUMINAI@SCO</title>
-
-<link rel="manifest" href="manifest.json">
 
 <meta name="theme-color" content="#7c3aed"/>
 
 <style>
+
 body{
 margin:0;
-font-family:Arial;
+padding:0;
+font-family:Arial,sans-serif;
 background:linear-gradient(135deg,#7c3aed,#ff6b6b);
 color:white;
 }
 
 .container{
-padding:20px;
 max-width:450px;
 margin:auto;
+padding:20px;
 text-align:center;
 }
 
 .logo{
-font-size:70px;
+font-size:75px;
 margin-top:20px;
 }
 
 h1{
 font-size:42px;
-margin:10px 0;
+margin-bottom:5px;
+}
+
+.subtitle{
+font-size:18px;
+opacity:0.9;
+margin-bottom:25px;
 }
 
 .card{
@@ -40,16 +45,23 @@ background:rgba(255,255,255,0.15);
 padding:20px;
 border-radius:25px;
 backdrop-filter:blur(10px);
-margin-top:20px;
+margin-bottom:25px;
+}
+
+.select-box{
+width:100%;
+padding:16px;
+font-size:18px;
+border:none;
+border-radius:15px;
+margin-top:15px;
 }
 
 .btn{
 display:block;
-background:white;
-color:black;
 padding:18px;
-margin:12px 0;
 border-radius:16px;
+margin-top:15px;
 font-size:20px;
 font-weight:bold;
 text-decoration:none;
@@ -65,24 +77,22 @@ background:#7c3aed;
 color:white;
 }
 
-select{
-width:100%;
-padding:18px;
-border:none;
-border-radius:15px;
-font-size:18px;
-margin-top:15px;
-}
-
 .subject{
 background:white;
 color:black;
 padding:18px;
 border-radius:18px;
-margin:12px 0;
-font-weight:bold;
+margin-top:12px;
 font-size:20px;
+font-weight:bold;
 }
+
+.footer{
+margin-top:30px;
+opacity:0.8;
+font-size:15px;
+}
+
 </style>
 </head>
 
@@ -94,13 +104,16 @@ font-size:20px;
 
 <h1>LUMINAI@SCO</h1>
 
-<p>AI Powered Smart Learning App</p>
+<div class="subtitle">
+AI Powered Smart Learning App
+</div>
 
 <div class="card">
 
-<h2>🎯 Select Class</h2>
+<h2>🎯 Select Your Class</h2>
 
-<select>
+<select class="select-box">
+
 <option>Class 6</option>
 <option>Class 7</option>
 <option>Class 8</option>
@@ -108,11 +121,16 @@ font-size:20px;
 <option selected>Class 10</option>
 <option>Class 11</option>
 <option>Class 12</option>
+
 </select>
 
-<a class="btn orange">🚀 Start Learning</a>
+<a href="#" class="btn orange">
+🚀 Start Learning
+</a>
 
-<a class="btn purple">🤖 Ask AI Tutor</a>
+<a href="#" class="btn purple">
+🤖 Ask AI Tutor
+</a>
 
 </div>
 
@@ -134,9 +152,9 @@ font-size:20px;
 
 </div>
 
-<p style="margin-top:30px;">
+<div class="footer">
 Made with ❤️ by Satish Chandra Ojha
-</p>
+</div>
 
 </div>
 
