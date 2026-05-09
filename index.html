@@ -1,155 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LUMINAI@SCO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<title>LUMINAI@SCO</title>
 
-  <style>
-    body{
-      margin:0;
-      padding:0;
-      font-family: Arial, sans-serif;
-      background:#0f172a;
-      color:white;
-    }
+<link rel="manifest" href="manifest.json">
 
-    .hero{
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:20px;
-      background:linear-gradient(135deg,#7c3aed,#ea580c);
-    }
+<meta name="theme-color" content="#7c3aed"/>
 
-    .card{
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.1);
-      border-radius:20px;
-      padding:20px;
-      margin-top:20px;
-      width:100%;
-      max-width:400px;
-      backdrop-filter:blur(10px);
-    }
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#7c3aed,#ff6b6b);
+color:white;
+}
 
-    button{
-      border:none;
-      border-radius:12px;
-      padding:12px 20px;
-      font-weight:bold;
-      cursor:pointer;
-      margin-top:10px;
-    }
+.container{
+padding:20px;
+max-width:450px;
+margin:auto;
+text-align:center;
+}
 
-    .btn1{
-      background:#f97316;
-      color:white;
-      width:100%;
-    }
+.logo{
+font-size:70px;
+margin-top:20px;
+}
 
-    .btn2{
-      background:#7c3aed;
-      color:white;
-      width:100%;
-    }
+h1{
+font-size:42px;
+margin:10px 0;
+}
 
-    .feature{
-      background:rgba(255,255,255,0.07);
-      padding:14px;
-      border-radius:14px;
-      margin-top:10px;
-    }
+.card{
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+margin-top:20px;
+}
 
-    .subject{
-      background:white;
-      color:black;
-      border-radius:14px;
-      padding:15px;
-      margin-top:12px;
-      font-weight:bold;
-    }
+.btn{
+display:block;
+background:white;
+color:black;
+padding:18px;
+margin:12px 0;
+border-radius:16px;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+}
 
-    .footer{
-      margin-top:30px;
-      opacity:0.7;
-      font-size:12px;
-    }
-  </style>
+.orange{
+background:#ff6b00;
+color:white;
+}
+
+.purple{
+background:#7c3aed;
+color:white;
+}
+
+select{
+width:100%;
+padding:18px;
+border:none;
+border-radius:15px;
+font-size:18px;
+margin-top:15px;
+}
+
+.subject{
+background:white;
+color:black;
+padding:18px;
+border-radius:18px;
+margin:12px 0;
+font-weight:bold;
+font-size:20px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero">
+<div class="container">
 
-  <div style="font-size:70px;">🎓</div>
+<div class="logo">🎓</div>
 
-  <h1 style="font-size:40px;font-weight:900;margin:10px 0;">
-    LUMINAI@SCO
-  </h1>
+<h1>LUMINAI@SCO</h1>
 
-  <p style="font-size:18px;opacity:0.9;">
-    AI Powered Smart Learning App
-  </p>
+<p>AI Powered Smart Learning App</p>
 
-  <div class="card">
+<div class="card">
 
-    <h2 style="margin-top:0;">🚀 Features</h2>
+<h2>🎯 Select Class</h2>
 
-    <div class="feature">🤖 AI Tutor</div>
-    <div class="feature">📚 NCERT Notes</div>
-    <div class="feature">🎬 Animations</div>
-    <div class="feature">🧠 Mnemonics</div>
-    <div class="feature">📝 Quiz & MCQ</div>
-    <div class="feature">🎵 Audio Learning</div>
-    <div class="feature">📈 Performance Analytics</div>
-    <div class="feature">🌙 Dark Mode</div>
+<select>
+<option>Class 6</option>
+<option>Class 7</option>
+<option>Class 8</option>
+<option>Class 9</option>
+<option selected>Class 10</option>
+<option>Class 11</option>
+<option>Class 12</option>
+</select>
 
-    <button class="btn1" onclick="showSubjects()">
-      Start Learning
-    </button>
+<a class="btn orange">🚀 Start Learning</a>
 
-    <button class="btn2" onclick="alert('AI Tutor Coming Soon 🚀')">
-      Ask AI Tutor
-    </button>
-
-  </div>
-
-  <div id="subjects" class="card" style="display:none;">
-
-    <h2>📖 Subjects</h2>
-
-    <div class="subject">⚡ Physics</div>
-    <div class="subject">🧪 Chemistry</div>
-    <div class="subject">📐 Mathematics</div>
-    <div class="subject">🌍 Geography</div>
-    <div class="subject">🏛 History</div>
-    <div class="subject">🧬 Biology</div>
-
-  </div>
-
-  <div class="footer">
-    Made with ❤️ by Satish Chandra Ojha
-  </div>
+<a class="btn purple">🤖 Ask AI Tutor</a>
 
 </div>
 
-<script>
+<div class="card">
 
-function showSubjects(){
-  document.getElementById("subjects").style.display = "block";
-  window.scrollTo({
-    top:document.body.scrollHeight,
-    behavior:"smooth"
-  });
-}
+<h2>📚 Subjects</h2>
 
-</script>
+<div class="subject">⚡ Physics</div>
+
+<div class="subject">🧪 Chemistry</div>
+
+<div class="subject">📐 Mathematics</div>
+
+<div class="subject">🌍 Geography</div>
+
+<div class="subject">🏛️ History</div>
+
+<div class="subject">🧬 Biology</div>
+
+</div>
+
+<p style="margin-top:30px;">
+Made with ❤️ by Satish Chandra Ojha
+</p>
+
+</div>
 
 </body>
 </html>
